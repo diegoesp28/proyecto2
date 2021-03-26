@@ -1,8 +1,9 @@
+/* color del cuerpo */
 body{
     background: #FC791C;
 }
 
-
+/* modificacion de tabla */
 table{
     border: 1px rgb(199, 124, 70);
     border-radius: 5%;
@@ -10,29 +11,33 @@ table{
     text-align: left;
     color: black;
 }
-
+/* quitandole las punta de las imagenes en un 70 porciento */
 img{
     border-radius: 70%;
 }
 
+/* quitandole el borde radius a los iconos para que no sean afectados lor la <img> */
 .icono{
     border-radius: 0%;
 }
 
+/* darle una sombra a los hipervinculo y cambiandole el color y que tenga un radio del 10% los bordes */
 a{
     background: #00A1B0;
     border-radius: 10%;
     color: black;
     
 }
+/* dandole una sombra a los hipervinculo cuando pasa el cursor */
 a:hover{
     box-shadow: 5px 5px 5px black;
 }
+
+/* quitarle el fondo de loa <a> con el  */
 .atras{
     background: none;
-    height: 50px;
-    width: 50px;
 }
+/* darle sombra a los iconos */
 .icono:hover{
     box-shadow: 2px 3px 5px black;
 }
