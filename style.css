@@ -14,7 +14,25 @@ table{
 img{
     border-radius: 70%;
 }
+
+.icono{
+    border-radius: 0%;
+}
+
+a{
+    background: #00A1B0;
+    border-radius: 10%;
+    color: black;
+    
+}
+a:hover{
+    box-shadow: 5px 5px 5px black;
+}
 .atras{
-    color:#00A1B0;
-    text-align: right;
+    background: none;
+    height: 50px;
+    width: 50px;
+}
+.icono:hover{
+    box-shadow: 2px 3px 5px black;
 }
