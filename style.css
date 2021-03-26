@@ -1,1 +1,16 @@
+table{
+    border: 1px rgb(199, 124, 70);
+    border-radius: 5%;
+    background: chocolate;
+    text-align: left;
+    color: black;
+}
 
+img{
+    border-radius: 70%;
+}
+.atras{
+    background: chocolate;
+    color:white;
+    text-align: right;
+}
