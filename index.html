@@ -6,58 +6,76 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-    <div align = "center">
-        <h1 >
-            <u>ONG - AYUDA A UN PELUDO</u>
-        </h1>
-    </div>
-    <div align= "center">
-        <p >
-            Esta compañía se dedica a extraer animales que 
-            viven en situación de calle, para después ser 
-            atendidos como corresponde con el fin de que 
-            ellos puedan encontrar un buen hogar, que los 
-            cuide y que los ame.
-        </p>
-    </div>
     <div>
-        <h2 align="center">Nuestos integrantes:</h2>
-        <center>
-            <table>
-                <tr>
-                        <p>
-                            Nelson Navarro - Cargo: Gerente
-                            <br>
-                            Diego Espinoza - Cargo: Vendedor
-                        </p>
-                </tr>
-            </table>
-        </center>
-    </div>
-    <div align="center">
-        <h3><u>Nuestras secciones de AYUDA</u></h3>
-    </div>
-    <div>
-        <table align="center">
-            <!-- <tr> crea filas y el <td> crea columnas  
-            pero solo se puede hacer dentro de un table-->
-            <tr>
-                <td>
-                    <img src="imagen/G4.jpg"  height="150px" width="200">
-                </td>
-                <td>
-                    <u><a href="gatos.html">Gatos</a></u>
-                </td>
+        <table border="2px" > <!-- Lo cambiaremos por CSS -->
+            <tr class="menu">
+                <td rowspan="4" > 
+                    <li> <a class="menu">Inicio</a></li>
+                    <li> <a class="menu">Nosotros</a> </li>
+                    <li> <a class="menu">Perros</a></li>
+                    <li> <a class="menu">Gatos</a></li>
+                    <li> <a class="menu">Contactos</a> </li></td>
+                <td colspan="2" class="cuadro1"><h1 >
+                    ONG - AYUDA A UN PELUDO
+                </h1>
+
+                <p >
+                    Esta compañía se dedica a extraer animales que 
+                    viven en situación de calle, para después ser 
+                    atendidos como corresponde con el fin de que 
+                    ellos puedan encontrar un buen hogar, que los 
+                    cuide y que los ame.
+                </p></td>
+                
+            </tr>
+            <tr class="texto">
+                
+                <td colspan="2" class="cuadro2"><h2>Nuestos integrantes:</h2>
+                
+                    <table>
+                        <tr>
+                            <p>
+                                Nelson Navarro - Cargo: Gerente
+                                <br>
+                                Diego Espinoza - Cargo: Vendedor
+                            </p>
+                        </tr>
+                    </table></td>
+                
             </tr>
             <tr>
-                <td>
-                    <img src="imagen/P4.jpg" height="150px" width="200">
-                </td>
-                <td>
-                    <u><a href="Perros.html">Perros</a></u>
-                </td>
+                
+                <td colspan="2" class="cuadro3"><h3>Nuestras secciones de AYUDA</h3></td>
+                
             </tr>
+            <tr>
+                
+                <td colspan="2" class="cuadro4"> 
+                    <table border="1">
+                    <!-- <tr> crea filas y el <td> crea columnas  
+                        pero solo se puede hacer dentro de un table-->
+                        <tr>
+                            <td>
+                                <img src="imagen/G4.jpg" >
+                            </td>
+                            <td>
+                                <u><a href="gatos.html">Gatos</a></u>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="imagen/P4.jpg">
+                            </td>
+                            <td>
+                                <u><a href="Perros.html">Perros</a></u>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                
+            </tr>
+            
         </table>
     </div>
-</body>
-</html>
+    </body>
+    </html>
