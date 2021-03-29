@@ -24,7 +24,9 @@ a.menu:hover{
 body{
     background: rgb(46, 41, 41);
 }
-
+.menu{
+    width: 20%;
+}
 td.texto{
     height: 25%;
 }
