@@ -61,6 +61,7 @@ img{
 .cuadro3{
     background: rgb(255, 165, 0);
     height: 25%;
+    text-align: left;
     padding: 30px;
 }
 .cuadro4{
