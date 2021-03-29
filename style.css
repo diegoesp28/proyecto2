@@ -1,45 +1,72 @@
 /* color del cuerpo */
-body{
-    background: #FC791C;
-}
-
-/* modificacion de tabla */
-table{
-    border: 1px rgb(199, 124, 70);
-    border-radius: 5%;
-    background: chocolate;
-    text-align: left;
-    color: black;
-}
-/* quitandole las punta de las imagenes en un 70 porciento */
-img{
-    border-radius: 70%;
-}
-
-/* quitandole el borde radius a los iconos para que no sean afectados lor la <img> */
-.icono{
-    border-radius: 0%;
-}
-
-/* darle una sombra a los hipervinculo y cambiandole el color y que tenga un radio del 10% los bordes */
-a{
-    border: black 1px solid;
-    background: #FF6A00;
-    border-radius: 10%;
-    color: black;
-    
-}
-/* dandole una sombra a los hipervinculo cuando pasa el cursor */
-a:hover{
-    box-shadow: 5px 5px 5px black;
-}
-
-/* quitarle el fondo y borde de la tag <a>  */
-.atras{
+*{
+    font-family: sans-serif;
     background: none;
-    border: none;
+    color: white;
 }
-/* darle sombra a los iconos */
-.icono:hover{
-    box-shadow: 2px 3px 5px black;
+a.atras{
+    float: right;
+}
+/* todos los tag a se vean de color negro */
+a{
+    color: white;
+    text-decoration: none;
+    display: grid;
+}
+/* todos los tag a de la clase menu */
+
+a:hover{
+    color: gray;
+    align-content: center;
+}
+.DatoAnimal{
+    text-align: left;
+    float: 50%;
+}
+.atrasAnimal{
+    float: right;
+    text-align: right;
+}
+body{
+    background: rgb(46, 41, 41);
+}
+
+/* quitandole las punta de las imagenes en un 1.34% porciento  y definimos un tamaño de 40% y 45%*/
+img{
+    border-radius: 1.34%;
+    width: 40%;
+    height: 45%;
+}
+.menu{
+    float: left;
+    width: 20%;
+    height: auto;
+}
+.cuadroG{
+    float: right;
+    width: 80%;
+}
+.cuadro1{
+    background: #03E7FC;
+    height: 25%;
+    text-align: left;
+    padding: 30px;
+}
+.cuadro2{
+    background: rgb(255, 255, 0);
+    height: 25%;
+    text-align: left;
+    padding: 30px;
+} 
+.cuadro3{
+    background: rgb(255, 165, 0);
+    height: 25%;
+    text-align: left;
+    padding: 30px;
+}
+.cuadro4{
+    background: rgb(255, 0, 0);
+    height: 25%;
+    text-align: left;
+    padding: 30px;
 }
