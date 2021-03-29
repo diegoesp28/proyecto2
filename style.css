@@ -3,10 +3,11 @@
     font-family: sans-serif;
     background: none;
     color: white;
-    text-align: center;
+    
 }
-
-
+a.atras{
+    float: right;
+}
 /* todos los tag a se vean de color negro */
 a{
     color: white;
@@ -17,15 +18,23 @@ a.menu:hover{
     color: gray;
     align-content: center;
 }
-
+.DatoAnimal{
+    text-align: left;
+    float: 50%;
+}
+.atrasAnimal{
+    float: right;
+    text-align: right;
+}
 body{
     background: rgb(46, 41, 41);
 }
 
-/* quitandole las punta de las imagenes en un 1.34% porciento */
+/* quitandole las punta de las imagenes en un 1.34% porciento  y definimos un tamaño de 40% y 45%*/
 img{
     border-radius: 1.34%;
-    width: 35%;
+    width: 40%;
+    height: 45%;
 }
 .menu{
     float: left;
@@ -38,10 +47,12 @@ img{
 .cuadro1{
     background: #03E7FC;
     height: 25%;
+    text-align: center;
 }
 .cuadro2{
     background: rgb(255, 255, 0);
     height: 25%;
+    text-align: center;
 
 } 
 .cuadro3{
@@ -52,5 +63,6 @@ img{
 .cuadro4{
     background: rgb(255, 0, 0);
     height: 25%;
+    text-align: center;
 
 }
