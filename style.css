@@ -6,10 +6,7 @@
     text-align: center;
 }
 
-li{
-    list-style-type: none;
-    text-align: left;
-}
+
 /* todos los tag a se vean de color negro */
 a{
     color: white;
@@ -24,19 +21,20 @@ a.menu:hover{
 body{
     background: rgb(46, 41, 41);
 }
-.menu{
-    width: 20%;
-}
-td.texto{
-    height: 25%;
-}
 
-/* quitandole las punta de las imagenes en un 70 porciento */
+/* quitandole las punta de las imagenes en un 1.34% porciento */
 img{
     border-radius: 1.34%;
     width: 35%;
 }
-
+.menu{
+    float: left;
+    width: 20%;
+}
+.cuadroG{
+    float: right;
+    width: 80%;
+}
 .cuadro1{
     background: #03E7FC;
     height: 25%;
@@ -44,12 +42,15 @@ img{
 .cuadro2{
     background: rgb(255, 255, 0);
     height: 25%;
+
 } 
 .cuadro3{
     background: rgb(255, 165, 0);
     height: 25%;
+
 }
 .cuadro4{
     background: rgb(255, 0, 0);
     height: 25%;
+
 }
