@@ -13,6 +13,7 @@ li{
 /* todos los tag a se vean de color negro */
 a{
     color: white;
+    text-decoration: none;
 }
 /* todos los tag a de la clase menu */
 a.menu:hover{
