@@ -15,22 +15,22 @@
     
 <br>
 <div class="container">
-    <form action="" method="" enctype="" name="registrar"> 
+    <form action="http://www.colex.cl/duoc/cargaData.php" method="POST"> 
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="..">Nombre</label>
-                <input type="text" class="form-control" id="nombreUsuario">
+                <input type="text" class="form-control"  name="nombre" id="nombreUsuario">
             </div>
             <div class="form-group col-md-4">
                 <label for="..">Email</label>
-                <input type="text" class="form-control" id="correo">
+                <input type="email" class="form-control" name="correo"  id="correo">
             </div>
         </div>
         
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="inputCity">Ciuedad de recidencia</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input type="text" class="form-control" id="inputCity" name="ciudad">
             </div>
             <div class="form-group col-md-2">
                 <label for="inputState">documento</label>
@@ -42,7 +42,7 @@
             </div>
             <div class="form-group col-md-2">
                 <label for="inputZip">RUT / Pasaporte</label>
-                <input type="text" class="form-control" id="CodeIdentificador">
+                <input type="text" class="form-control" name="documento" id="CodeIdentificador">
             </div>
             
         </div>
@@ -50,14 +50,15 @@
 
             <div class="form-group col-md-6">
                 <label for="exampleFormControlTextarea1">comentario</label>
-                <textarea class="form-control" id="comentario" rows="3"></textarea>
+                <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
             </div>
             <div class="form-group col-md-2">
                 <label for="inputZip">Celular</label>
-                <input type="text" class="form-control" id="Telefono" value="+569">
+                <input type="text" class="form-control" id="Telefono" name="telefono" value="+569">
+                <input type="hidden" id="url" name="url" value="google.cl" >
             </div>
         </div>
-            
+
         <button type="submit" class="btn btn-primary">enviar</button>
         <button type="reset" class="btn btn-secondary">cancelar</button>
     </form>
