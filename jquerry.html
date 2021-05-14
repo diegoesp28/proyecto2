@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- www.tutiempo.net - Ancho:252px - Alto:75px -->
+    
+    <h1>Mi ubicacion</h1>
+    <button onclick="getLocalizacion()">Mostrar</button>
+    <p id="geo"></p>
+    <script>
+    var x = document.getElementById("geo");
+    function getLocalizacion(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }else{
+            x.innerHTML = "no es compatible tu navegador"
+        }
+
+    function showPosition(position){
+        x.innerHTML = "latitud: "+position.coords.latitude+ "<br> +longitud: "+position.coords.longitude;
+    }
+
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.get("https://www.themealdb.com/api/json/v1/1/categories.php",
+        function(data){
+            $.each(data.categories, function(i,item){
+                $("categorias").append("<tr><td>"+item.idCategory+"</tr><td>"+item.strCategory+
+                                        "</tr><td><img scr='"+item.strCategoryThumb+"'>"+
+                                        "</tr><td>"+item.strCategoryDescription+"</tr><td>");
+
+            });
+
+        });
+    });
+</body>
+    </html>
