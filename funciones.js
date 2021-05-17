@@ -13,7 +13,7 @@ function showPosition(position){
     var url = linkAPI +latitud +','+longitud;
     jQuery.getJSON(url , 
     function(data){
-        jQuery('#geo').html(data.location.name+ ', ' +data.location.country+': '+data.current.temp_c+'°c');
+        jQuery('#geo').html('<p style="font-family: sans-serif;"> Clima:'+data.location.name+ ', ' +data.location.country+': '+data.current.temp_c+'°c </p>');
     });
 }
 
