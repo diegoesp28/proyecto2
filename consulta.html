@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="funciones.js"></script>
+    <script type="text/javascript" src="validar.js"></script>
+    <script type="text/javascript" src="rutvalidar.js"></script>
     
     <!-- codigoimportante -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>  
@@ -45,22 +47,23 @@
     </header>
 <br>
 <div class="container">
-    <form action="http://www.colex.cl/duoc/cargaData.php" method="POST"> 
+    <!-- action="http://www.colex.cl/duoc/cargaData.php"  -->
+     <form method="POST" id="formulario"> 
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="..">Nombre</label>
-                <input type="text" class="form-control"  name="nombre" id="nombreUsuario">
+                <input type="text" class="form-control"  name="nombre" id="nombreUsuario" required>
             </div>
             <div class="form-group col-md-4">
                 <label for="..">Email</label>
-                <input type="email" class="form-control" name="correo"  id="correo">
+                <input type="email" class="form-control" name="correo"  id="correo" required>
             </div>
         </div>
         
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="inputCity">Ciuedad de recidencia</label>
-                <input type="text" class="form-control" id="inputCity" name="ciudad">
+                <input type="text" class="form-control" id="inputCity" name="ciudad" required >
             </div>
             <div class="form-group col-md-2">
                 <label for="inputState">documento</label>
@@ -72,7 +75,7 @@
             </div>
             <div class="form-group col-md-2">
                 <label for="inputZip">RUT / Pasaporte</label>
-                <input type="text" class="form-control" name="documento" id="CodeIdentificador">
+                <input type="text" class="form-control" name="documento" id="rut" required oninput="checkRut(this)">
             </div>
             
         </div>
@@ -80,11 +83,11 @@
 
             <div class="form-group col-md-6">
                 <label for="exampleFormControlTextarea1">comentario</label>
-                <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
+                <textarea class="form-control" id="comentario" name="comentario" rows="3" required></textarea>
             </div>
             <div class="form-group col-md-2">
                 <label for="inputZip">Celular</label>
-                <input type="text" class="form-control" id="Telefono" name="telefono" value="+569">
+                <input type="text" class="form-control" id="Telefono" name="telefono" >
                 <input type="hidden" id="url" name="url" value="google.cl" >
             </div>
         </div>
