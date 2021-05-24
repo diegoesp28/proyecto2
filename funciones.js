@@ -15,7 +15,7 @@ function showPosition(position){
     var url = linkAPI +latitud +','+longitud;
     jQuery.getJSON(url , 
     function(data){
-        jQuery('#geo').html('<button type="button" class="btn btn-success ">'+data.location.name+ ', ' +data.location.country+': '+data.current.temp_c+'°c </button>');
+        jQuery('#geo').html('<button type="button" onclick="getLocation()" class="btn btn-success ">'+data.location.name+ ', ' +data.location.country+': '+data.current.temp_c+'°c </button>');
     });
 }
 
