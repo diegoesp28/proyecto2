@@ -16,6 +16,10 @@ $(document).ready(function() {
 		comentario: {
 		  required: true,
 		  minlength: 20
+		},
+		documento: {
+			minlength:9,
+			maxlength:10
 		}
 	  },
 	  messages : {
@@ -35,6 +39,10 @@ $(document).ready(function() {
 		  required: "requiere un comentario",
 		  minlength: "requiere minimo 20 caracteres"
 		  
+		},
+		documento: {
+			minlength:"faltan caracteres",
+			maxlength:"sobra caracteres"
 		}
 	  }
 	});
