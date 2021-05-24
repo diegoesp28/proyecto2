@@ -20,16 +20,20 @@ $(document).ready(function() {
 	  },
 	  messages : {
 		nombre: {
-		  minlength: "el nombre requiere 3 caracteres"
+		  minlength: "el nombre requiere 3 caracteres",
+		  required: "nesesitas un nombre"
 		},
 		ciudad: {
-		  required: "requiere 3 caracteres",
+		  required: "ciudad con 3 caracteres",
+		  minlength: "ciudad con 3 caracteres"
 		},
 		correo: {
-		  correo: "tiene que ser en formato correo: abc@domain.tld"
+		  correo: "tiene que ser en formato correo: abc@domain.tld",
+		  required: "re quiere un correo"
 		},
 		comentario: {
-		  required: "tiene que tener minimo 20 caracteres",
+		  required: "requiere un comentario",
+		  minlength: "requiere minimo 20 caracteres"
 		  
 		}
 	  }
