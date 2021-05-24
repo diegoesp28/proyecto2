@@ -1,6 +1,7 @@
 function checkRut(rut) {
-    // Despejar Puntos
+    // Despejar Puntos y comas
     var valor = rut.value.replace('.','');
+    var valor = rut.value.replace(',','');
     // Despejar Guión
     valor = valor.replace('-','');
     
