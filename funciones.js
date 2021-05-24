@@ -1,3 +1,5 @@
+//------------clima
+
 function getLocation(){
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -13,7 +15,7 @@ function showPosition(position){
     var url = linkAPI +latitud +','+longitud;
     jQuery.getJSON(url , 
     function(data){
-        jQuery('#geo').html('<p style="font-family: sans-serif;"> Clima:'+data.location.name+ ', ' +data.location.country+': '+data.current.temp_c+'°c </p>');
+        jQuery('#geo').html('<button type="button" class="btn btn-success ">'+data.location.name+ ', ' +data.location.country+': '+data.current.temp_c+'°c </button>');
     });
 }
 
