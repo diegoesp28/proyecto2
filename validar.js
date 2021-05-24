@@ -41,6 +41,7 @@ $(document).ready(function() {
 		  
 		},
 		documento: {
+			required: "requiere un rut o pasaporte",
 			minlength:"faltan caracteres",
 			maxlength:"sobra caracteres"
 		}
