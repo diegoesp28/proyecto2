@@ -87,7 +87,8 @@ $(document).ready(function() {
 		  
 		},
 		documento: {
-			required: "requiere un rut o pasaporte"
+			required: "requiere un rut o pasaporte",
+			rut:'inserte un rut valido'
 			
 			
 		}
