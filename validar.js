@@ -1,7 +1,7 @@
 //la validacion antterior quedo como formato de rut devido a que el nuevo no modifica sino que acepta formato
 function validaRut(campo){
 	if ( campo.length == 0 ){ return false; }
-	if ( campo.length < 8 ){ return false; }
+	
 
 	campo = campo.replace('-','')
 	campo = campo.replace(/\./g,'')
