@@ -13,7 +13,9 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
     <script type="text/javascript" src="validar.js"></script>
-    
+    <style type="text/css">.error {color: red;}</style>
+
+
 </head>
 <body>
 <header>
@@ -50,21 +52,22 @@
 <br>
 <div class="container">
     <!--  -->
+   
     <form method="POST" action="http://www.colex.cl/duoc/cargaData.php"  id="formulario"> 
         <div class="form-row">
             <div class="form-group col-md-4">
-                <label for="..">Nombre</label>
+                <label for="..">Nombre <label style="color: red;">*</label></label>
                 <input type="text" class="form-control"  name="nombre" id="nombre" required>
             </div>
             <div class="form-group col-md-4">
-                <label for="..">Email</label>
+                <label for="..">Email <label style="color: red;">*</label></label>
                 <input class="form-control" name="correo"  id="correo" required>
             </div>
         </div>
         
         <div class="form-row">
             <div class="form-group col-md-4">
-                <label for="inputCity">Ciuedad de recidencia</label>
+                <label for="inputCity">Ciudad de recidencia<label style="color: red;">*</label></label>
                 <input type="text" class="form-control" id="ciudad" name="ciudad" required >
             </div>
             <div class="form-group col-md-2">
@@ -76,7 +79,7 @@
                 </select>
             </div>
             <div class="form-group col-md-2">
-                <label for="inputZip">RUT / Pasaporte</label>
+                <label for="inputZip">RUT / Pasaporte <label style="color: red;">*</label></label>
                 <input type="text" class="form-control" name="documento" id="rut" required oninput="checkRut(this)">
             </div>
             
@@ -84,18 +87,21 @@
         <div class="form-row">
 
             <div class="form-group col-md-6">
-                <label for="exampleFormControlTextarea1">comentario</label>
+                <label for="exampleFormControlTextarea1">comentario <label style="color: red;">*</label></label>
                 <textarea class="form-control" id="comentario" name="comentario" rows="3" required></textarea>
             </div>
             <div class="form-group col-md-2">
-                <label for="inputZip">Celular (opcional)</label>
+                <label for="inputZip">Celular</label>
                 <input type="text" class="form-control" id="Telefono" name="telefono" >
                 <input type="hidden" id="url" name="url" value="google.cl" >
             </div>
         </div>
+        <label style="color: red;">obrigatorio *</label>
+        <div>
 
-        <button type="submit" class="btn btn-primary">enviar</button>
-        <button type="reset" class="btn btn-secondary">cancelar</button>
+            <button type="submit" class="btn btn-primary">enviar</button>
+            <button type="reset" class="btn btn-secondary">cancelar</button>
+        </div>
     </form>
 </div>
 
