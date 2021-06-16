@@ -33,7 +33,6 @@
                     <a class="nav-link" href="consulta.html" tabindex="-1" aria-disabled="true">Consulta</a>
                     </li>
                     <li class="nav-item" id="geo">
-                   
                     </li>
                 </ul>
                 </div>
@@ -41,94 +40,25 @@
         </header>
         <!-- menu -->
 <!-- esta clase ayuda a ordenar -->
+<br>
+<div class="col-2">
 <div class="row">
-    <!-- esta clase controla como queremos que se vea  los cuadros-->
+    {% for ve in mascota %}
     <div class="col-sm-12 col-md-12 col-lg-3">
-        <!-- cuadros con los datos-->
         <div class="card" style="width: 18rem;">
-            <a href="P1.html">
-                <img src="imagen/P1.jpg" class="card-img-top" alt="...">
+            
+            <img src="{{ve.img_mascota.url}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <center>
                         <p class="card-text">
-                            manchas
+                            {{ve.nombre}}
                         </p>
-                    </a>
                 </center>
             </div>
         </div>
     </div>
-
-    <div class="col-sm-12 col-md-12 col-lg-3">
-        <div class="card" style="width: 18rem;">
-            <a href="P2.html">
-                <img src="imagen/P4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <center>
-                        <p class="card-text">
-                            Bella
-                        </p>
-                    </a>
-                </center>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12 col-md-12 col-lg-3">
-        <div class="card" style="width: 18rem;">
-            <a href="G1.html">
-                <img src="imagen/G1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <center>
-                        <p class="card-text">
-                            Emperador
-                        </p>
-                    </a>
-                </center>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12 col-md-12 col-lg-3">
-        <div class="card" style="width: 18rem;">
-            <a href="P3.html">
-                <img src="imagen/P2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <center>
-                        <p class="card-text">
-                            chibu
-                        </p>
-                    </a>
-                </center>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12 col-md-12 col-lg-3">
-        <div class="card" style="width: 18rem;">
-            <a href="G2.html">
-                <img src="imagen/G2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <center>
-                        <p class="card-text">
-                            Cesia
-                        </p>
-                    </a>
-                </center>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12 col-md-12 col-lg-3">
-        <div class="card" style="width: 18rem;">
-            <a href="G3.html">
-                <img src="imagen/G3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <center>
-                        <p class="card-text">
-                            Preciosa
-                        </p>
-                    </a>
-                </center>
-            </div>
-        </div>
-    </div>
+{% endfor %}
+</div>
     <!-- cuadros con los datos-->
 </div>
 
