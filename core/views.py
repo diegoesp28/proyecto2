@@ -25,3 +25,9 @@ def animal(request):
     }
     return render(request,'core/animales.html',datos)
 
+def formulario(request):
+    mascota=mascotas.objects.all()
+    datos = {
+        'mascota': mascota
+    }
+    return render(request,'core/administrador.html',datos)
