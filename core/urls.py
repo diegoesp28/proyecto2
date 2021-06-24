@@ -9,5 +9,6 @@ urlpatterns =[
     path('contacto',contacto, name='contacto'),
     path('mascota/', animal, name='mascota'),
     path('formulario/', agregar, name='formulario'),
+    path('modificar/<id>', edit, name='modificar'),
 ]
 

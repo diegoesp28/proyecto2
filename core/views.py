@@ -40,3 +40,25 @@ def agregar(request):
             datos['mensaje']= f"error {formulario.is_valid()} {formulario.errors}"
 
     return render(request,'core/administrador.html',datos)
+
+def edit(request,id):
+    masco = mascotas.objects.get(numero=id)
+
+    datos = {
+    'form': MascotaFrom(instance=masco)
+    }
+    if request.method == 'POST':
+        formulario = MascotaFrom(data=request.POST, instance=masco)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje']= f"Modificado Correctamente"
+        else:
+            datos['mensaje']= f"error {formulario.is_valid()} tipo {formulario.errors}"
+    return render(request,'core/form_mod_mascota.html',datos)
+
+def mascota(request,id):
+    masco = mascotas.objects.get(numero=id)
+
+    datos = {
+    'form': MascotaFrom(instance=masco)
+    }
