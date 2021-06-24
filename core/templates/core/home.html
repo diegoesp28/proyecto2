@@ -6,6 +6,18 @@
 
 <div class="container">
 <table border='1'>
+        <tr>
+            <td>IMG</td>
+            <td>Chip</td>
+            <td>nombre</td>
+            <td>Edad</td>
+            <td>animal</td>
+            <td colspan='2' align='center'>
+                <button type="button" class="btn btn-success"><a style="color: black" href="http://127.0.0.1:8000/agregar/">Nueva Mascota</a></button>
+            </td>
+            
+            
+        </tr>
     {% for ve in mascota %}
         <tr>
             <td><img src="{{ve.img_mascota.url}}" width='50px' height='50px'></td>
@@ -13,8 +25,8 @@
             <td>{{ve.nombre}}</td>
             <td>{{ve.edad}}</td>
             <td>{{ve.id_tipo_animal}}</td>
-            <td><a href="{%url 'modificar' ve.numero%}">modificar</a></td>
-            <td><a href="{%url 'masco' ve.numero%}">ficha</a></td>
+            <td><a class="btn btn-warning" href="{%url 'modificar' ve.numero%}">modificar</a></td>
+            <td><a class="btn btn-info" href="{%url 'masco' ve.numero%}">ficha</a></td>
             
         </tr>
     {% endfor %}
