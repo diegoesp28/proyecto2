@@ -28,13 +28,15 @@ def animal(request):
     return render(request,'core/animales.html',datos)
 
 def agregar(request):
-    data = {'form':MascotaFrom()}
+    datos = {
+        'form': MascotaFrom()
+    }
     if request.method == 'POST':
-        formulario = MascotaFrom(data=request.POST)
+        formulario = MascotaFrom(request.POST, request.FILES)
         if formulario.is_valid():
             formulario.save()
-            data['mensaje'] ='mascota guardado'
+            datos['mensaje']= "guardados correctamente}"
         else:
-            data['form']= formulario
+            datos['mensaje']= f"error {formulario.is_valid()} {formulario.errors}"
 
-    return render(request,'core/administrador.html',data)
+    return render(request,'core/administrador.html',datos)

@@ -14,22 +14,23 @@
     <script type="text/javascript" src="{% static 'rutvalidar.js'%}"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
-    <script type="text/javascript" src="{% static 'validar.js'%}"></script>
+    {% comment %} <script type="text/javascript" src="{% static 'validar.js'%}"></script> {% endcomment %}
     <style type="text/css">.error {color: red;}</style>
 
 
 </head>
 <body>
 
-<div class="container">
-    <form method="post"> 
+<div class="container form-group" >
+    <form method="POST" action="" id="formulario" enctype="multipart/form-data"> 
     {% csrf_token %}
+    <div class="form-group">
     {{ form.as_p}}
-    <br>
+    </div>
     <button type="submit">guardar</button>
     <button type="reset">limpiar</button>
     </form>
-    {{mensaje}}
+<div class="alert alert-success" role="alert">{{mensaje}}</div>
 </div>
 
 </html>
