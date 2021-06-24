@@ -37,7 +37,7 @@ def agregar(request):
             formulario.save()
             datos['mensaje']= f"Guardados Correctamente"
         else:
-            datos['mensaje']= f"error {formulario.is_valid()} {formulario.errors}"
+            datos['mensaje']= f"error {formulario.is_valid()}"
 
     return render(request,'core/administrador.html',datos)
 
@@ -53,7 +53,7 @@ def edit(request,id):
             formulario.save()
             datos['mensaje']= f"Modificado Correctamente"
         else:
-            datos['mensaje']= f"error {formulario.is_valid()} tipo {formulario.errors}"
+            datos['mensaje']= f"error {formulario.is_valid()}"
     return render(request,'core/form_mod_mascota.html',datos)
 
 def mascota(request,id):
