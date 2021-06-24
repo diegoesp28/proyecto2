@@ -57,8 +57,9 @@ def edit(request,id):
     return render(request,'core/form_mod_mascota.html',datos)
 
 def mascota(request,id):
-    masco = mascotas.objects.get(numero=id)
 
+    mascota=mascotas.objects.get(numero=id)
     datos = {
-    'form': MascotaFrom(instance=masco)
+        'mascota': mascota
     }
+    return render(request,'core/masco.html',datos)

@@ -13,6 +13,8 @@
             <td>{{ve.nombre}}</td>
             <td>{{ve.edad}}</td>
             <td>{{ve.id_tipo_animal}}</td>
+            <td><a href="{%url 'modificar' ve.numero%}">modificar</a></td>
+            <td><a href="{%url 'masco' ve.numero%}">ficha</a></td>
             
         </tr>
     {% endfor %}
