@@ -10,6 +10,7 @@ urlpatterns =[
     path('animales/', animal, name='animales'),
     path('agregar/', agregar, name='agregar'),
     path('modificar/<id>', edit, name='modificar'),
+    path('eliminar/<id>', eliminar, name='eliminar'),
     path('masco/<id>', mascota, name='masco'),
 ]
 

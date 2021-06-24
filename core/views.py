@@ -39,7 +39,7 @@ def agregar(request):
         else:
             datos['mensaje']= f"error {formulario.is_valid()}"
 
-    return render(request,'core/administrador.html',datos)
+    return render(request,'core/agregar.html',datos)
 
 def edit(request,id):
     masco = mascotas.objects.get(numero=id)
@@ -63,3 +63,8 @@ def mascota(request,id):
         'mascota': mascota
     }
     return render(request,'core/masco.html',datos)
+
+def eliminar(request,id):
+    mascota=mascotas.objects.get(numero=id)
+    mascota.delete()
+    return redirect(to='home')

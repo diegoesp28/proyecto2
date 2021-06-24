@@ -13,7 +13,7 @@
             <td>Edad</td>
             <td>animal</td>
             <td>genero</td>
-            <td colspan='2' align='center'>
+            <td colspan='3' align='center'>
                 <button type="button" class="btn btn-success"><a style="color: black" href="http://127.0.0.1:8000/agregar/">Nueva Mascota</a></button>
             </td>
             
@@ -29,6 +29,7 @@
             <td>{{ve.id_genero}}</td>
             <td><a class="btn btn-warning" href="{%url 'modificar' ve.numero%}">modificar</a></td>
             <td><a class="btn btn-info" href="{%url 'masco' ve.numero%}">ficha</a></td>
+            <td><a class="btn btn-danger" href="{%url 'eliminar' ve.numero%}">eliminar</a></td>
             
         </tr>
     {% endfor %}
