@@ -14,6 +14,8 @@ def index(request):
     return render(request,'core/index.html')
 def nosotros(request):
     return render(request,'core/nosotros.html')
+def administrador(request):
+    return render(request,'core/administrador.html')
 def consulta(request):
     return render(request,'core/consulta.html')
 def contacto(request):
@@ -24,4 +26,5 @@ def animal(request):
         'mascota': mascota
     }
     return render(request,'core/animales.html',datos)
+
 
