@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+      {% load static %}
         <title>Ayuda a un peludo</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type="text/javascript" src="funciones.js"></script>
+        <script type="text/javascript" src="{% static 'funciones.js'%}"></script>
         <meta charset="utf-8">
         <style>
         .card-img-top{
@@ -14,34 +15,36 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     </head>
     <body>
-    <header>
+     <header>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <!-- area del menu -->
             <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-                <a class="navbar-brand" href="index.html">ayuda a un peludo</a>
+                <a class="navbar-brand" href="http://127.0.0.1:8000/inicio">ayuda a un peludo</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                    <a class="nav-link" href="index.html">INICIO <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="animales.html">Animales</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="contactos.html" tabindex="-1" aria-disabled="true">Contactos</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="consulta.html" tabindex="-1" aria-disabled="true">Consulta</a>
-                    </li>
-                    <li class="nav-item" id="geo">
-                    </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="http://127.0.0.1:8000/inicio">INICIO <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/nosotros">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/animales">Animales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/contacto" tabindex="-1" aria-disabled="true">Contactos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/consulta" tabindex="-1" aria-disabled="true">Consulta</a>
+                  </li>
+                  <li class="nav-item" id="geo">
+                    <!-- aqui se agrega el tiempo sin colocar nada -->
+                  </li>
                 </ul>
-                </div>
+              </div>
             </nav>	
         </header>
         <!-- menu -->
@@ -52,14 +55,15 @@
     {% for ve in mascota %}
     <div class="col-sm-4 col-md-4 col-lg-3">
         <div class="card" style="width: 18rem;">
-            
-            <img src="{{ve.img_mascota.url}}" class="card-img-top" alt="...">
+            <a href="{%url 'masco' ve.numero %}">
+                <img src="{{ve.img_mascota.url}}" class="card-img-top" alt="...">
                 <div class="card-body">
                 <center>
                     <p class="card-text">
                         {{ve.nombre}}
                     </p>
                 </center>
+            </a>
             </div>
         </div>
     </div>
