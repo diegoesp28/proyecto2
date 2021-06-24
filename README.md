@@ -1,2 +1,3 @@
 # proyecto2
-proyect2
+proyecto ayuda un peludo
+proyecto ajustado con Django
