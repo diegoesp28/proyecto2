@@ -33,11 +33,14 @@ def agregar(request):
     }
     if request.method == 'POST':
         formulario = MascotaFrom(request.POST, request.FILES)
+        datos['configuracion']= ""
         if formulario.is_valid():
             formulario.save()
             datos['mensaje']= f"Guardados Correctamente"
+            datos['configuracion']= "alert alert-success"
         else:
             datos['mensaje']= f"error {formulario.is_valid()}"
+            datos['configuracion']= "alert alert-danger"
 
     return render(request,'core/agregar.html',datos)
 
@@ -49,11 +52,15 @@ def edit(request,id):
     }
     if request.method == 'POST':
         formulario = MascotaFrom(data=request.POST, instance=masco)
+        datos['configuracion']= ""
         if formulario.is_valid():
             formulario.save()
             datos['mensaje']= f"Modificado Correctamente"
+            datos['configuracion']= "alert alert-success"
         else:
             datos['mensaje']= f"error {formulario.is_valid()}"
+            datos['configuracion']= "alert alert-danger"
+
     return render(request,'core/form_mod_mascota.html',datos)
 
 def mascota(request,id):
