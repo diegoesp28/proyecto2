@@ -35,7 +35,7 @@ def agregar(request):
         formulario = MascotaFrom(request.POST, request.FILES)
         if formulario.is_valid():
             formulario.save()
-            datos['mensaje']= "guardados correctamente}"
+            datos['mensaje']= f"Guardados Correctamente"
         else:
             datos['mensaje']= f"error {formulario.is_valid()} {formulario.errors}"
 
