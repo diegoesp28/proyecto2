@@ -21,7 +21,6 @@
 </head>
 <body>
 <header>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- area del menu -->
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
         <a class="navbar-brand" href="{%url 'inicio' %}">ayuda a un peludo</a>
@@ -52,7 +51,8 @@
         <br>
     <div class="row">
     <div class="col-4"></div>
-        <div class="col-4">
+        <div class="col-8">
+        <label style="color:red;"> todos los campos son obrigratorios</label>
                 <form method="POST" action="" id="formulario" enctype="multipart/form-data"> 
                 {% csrf_token %}
                     <div class="form-group">

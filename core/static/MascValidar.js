@@ -44,7 +44,7 @@ $(document).ready(function() {
 			required: "requiere un genero"
 		},
 		img_mascota: {
-			required: "requiere un genero"
+			required: "requiere una imagen"
 		}
 	  }
 	});
