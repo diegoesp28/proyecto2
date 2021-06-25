@@ -1,7 +1,7 @@
 from django import forms
 from django.db.models import fields
 
-from .models import mascotas
+from .models import mascotas, animal
 
 class MascotaFrom(forms.ModelForm):
     
@@ -25,10 +25,15 @@ class MascotaFrom(forms.ModelForm):
             'id_genero':'Genero'
         }
         widgets = {
-            'numero': forms.TextInput(attrs={'class': 'col-2 form-control'}), 
-            'nombre': forms.TextInput(attrs={'class': 'col-2 form-control'}),
-            'edad': forms.TextInput(attrs={'class': 'col-2 form-control'}), 
+            'numero': forms.TextInput(attrs={'class': 'col-5 form-control'}), 
+            'nombre': forms.TextInput(attrs={'class': 'col-5 form-control'}),
+            'edad': forms.TextInput(attrs={'class': 'col-5 form-control'}), 
             'img_mascota': forms.FileInput(attrs={'class': '' }),
-            'id_tipo_animal' : forms.Select(attrs={'class': 'col-2 form-control'}),
-            'id_genero': forms.Select(attrs={'class': 'col-2 form-control'})
+            'id_tipo_animal' : forms.Select(attrs={'class': 'col-5 form-control'}),
+            'id_genero': forms.Select(attrs={'class': 'col-5 form-control'})
         }
+
+class AnimalFrom(forms.ModelForm):
+     class Meta:
+        model = animal
+        fields = ('__all__')

@@ -1,7 +1,7 @@
 from django.http.response import HttpResponse
 from core.models import mascotas
 from django.shortcuts import render, redirect
-from .forms import MascotaFrom
+from .forms import MascotaFrom, AnimalFrom
 
 
 # Create your views here.
@@ -43,6 +43,23 @@ def agregar(request):
             datos['configuracion']= "alert alert-danger"
 
     return render(request,'core/agregar.html',datos)
+
+def animalADD(request):
+    datos = {
+        'form': AnimalFrom()
+    }
+    if request.method == 'POST':
+        formulario = AnimalFrom(request.POST)
+        datos['configuracion']= ""
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje']= f"Guardados Correctamente"
+            datos['configuracion']= "alert alert-success"
+        else:
+            datos['mensaje']= f"error {formulario.is_valid()}"
+            datos['configuracion']= "alert alert-danger"
+
+    return render(request,'core/addanimal.html',datos)
 
 def edit(request,id):
     masco = mascotas.objects.get(numero=id)

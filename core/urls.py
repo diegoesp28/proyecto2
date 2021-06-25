@@ -12,5 +12,6 @@ urlpatterns =[
     path('modificar/<id>', edit, name='modificar'),
     path('eliminar/<id>', eliminar, name='eliminar'),
     path('masco/<id>', mascota, name='masco'),
+    path('addanimal', animalADD, name='addanimal'),
 ]
 
